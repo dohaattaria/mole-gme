@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(image3.jpg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 50px;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgb(95, 3, 121), rgb(235, 179, 218));
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(255, 153, 1);
+}
+
+#score {
+    width: 160px;
+    padding: 15px 25px;
+    color: black;
+    background-color: rgb(255, 153, 0);
+    border-radius: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.heading:hover {
+    color: rgb(251, 255, 0);
+}
+
+#startButton {
+    width: 90px;
+    height: 60px;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(95, 3, 121), rgb(237, 98, 255));
+    color: rgb(248, 248, 6);
+    border: 3px solid rgb(163, 151, 151);
+}
+
+#startButton:hover {
+    background: linear-gradient(rgb(238, 5, 149), rgb(231, 96, 231));
+    color: rgb(78, 4, 62);
+    font-style: italic;
+cursor: grab;
+}
+
+#game {
+    width: 77%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(images.jpeg);
+    background-size: cover;
+    border: 4px solid rgb(43, 1, 43);
+
+}
+
+.box {
+    margin: 1px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.rat img {
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    cursor: url('images 4.jpeg'), pointer;
+
+};
+
+
+
+.rat {
+    position: absolute;
+    top: 300px;
+};
+
+
+
+.hole img {
+    height: 200px;
+    width: 280px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.hole {
+    margin-left: 78px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .header{
+        width: 100%;
+        
+    }
+    .heading {
+        font-size: 1rem;
+    }
+
+    #score {
+        font-size: 1rem;
+        width: 120px;
+        padding: 8px 16px;
+    }
+
+    #startButton {
+       display: none;
+    }
+
+    #game {
+        grid-template-columns: repeat(2, 1fr); 
+    };
+
+    .rat img {
+        width: 80px;
+        height: 80px;
+        top: 380px;
+    };
+
+    .hole img {
+        height: 90%;
+        width: 82%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header{
+        width: 100%;
+
+    }
+    .heading {
+        font-size: 1.2rem;
+    }
+
+    #score {
+        font-size: 0.9rem;
+        width: 100px;
+    }
+
+    #startButton {
+        display: none;
+    }
+
+    #game {
+        grid-template-columns: repeat(2, 1fr);
+        width: 50%; 
+        height: 50%;
+    };
+
+    .rat img {
+        width: 50px;
+        height: 80px;
+        top: 550px;
+    };
+
+    .hole img {
+        height: 100px;
+        width: 90%;
+    }
+}
+@media (max-width: 302px) {
+    .header{
+        width: 100%;
+        
+    }
+    .heading {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    #score {
+        font-size: 0.8rem;
+        width: 80px;
+        padding: 6px 10px;
+    }
+
+    #startButton {
+        /* width: 50px;
+        height: 30px;
+        font-size: 0.7rem;
+        padding: 4px; */
+        display: none;
+    }
+
+
+    #game {
+        width: 95%; /* Adjust width for smaller screens */
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 10px;
+    }
+
+    .rat img {
+        width: 40px;
+        height: 35px;
+    }
+
+    .hole img {
+        height: 80px;
+        width: 70%;
+    }
+
+    .box {
+        height: 120px; /* Adjust box size */
+    }
+}
+
